@@ -13,6 +13,6 @@ const app = express();
 app.use('/graphiql', graphiqlExpress({
     endpointUrl: '/graphql',
 }));
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: myGraphQLSchema}));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema}));
 
 app.listen(3000);
